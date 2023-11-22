@@ -4,6 +4,10 @@
 This project integrates OpenAI's Text-to-Speech API into a Unity application, allowing users to convert and synthesize text to spoken audio within Unity via any AudioSource component.
 Tested with Unity version 2022.3.4f1.
 
+## Demo Video
+
+https://github.com/mapluisch/OpenAI-Text-To-Speech-for-Unity/assets/31780571/7c1b89e7-6185-42f9-aa34-420f10fe136a
+
 ### Setup
 1. Open the main Unity Scene.
 2. Input your OpenAI API key in the `OpenAI` GameObject.
