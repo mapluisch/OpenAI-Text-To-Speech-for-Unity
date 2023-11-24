@@ -5,8 +5,7 @@ This project integrates OpenAI's Text-to-Speech API into a Unity application, al
 Tested with Unity version 2022.3.4f1.
 
 ## Demo Video
-
-https://github.com/mapluisch/OpenAI-Text-To-Speech-for-Unity/assets/31780571/7c1b89e7-6185-42f9-aa34-420f10fe136a
+https://github.com/mapluisch/OpenAI-Text-To-Speech-for-Unity/assets/31780571/29c19c4f-8d7a-40e2-bc4e-c7b7337520e2
 
 ### Setup
 1. Open the main Unity Scene.
