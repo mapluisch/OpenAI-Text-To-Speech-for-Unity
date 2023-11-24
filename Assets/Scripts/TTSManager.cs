@@ -28,4 +28,12 @@ public class TTSManager : MonoBehaviour
             Debug.LogError("Failed to get audio data from OpenAI.");
         }
     }
+
+    public async void SynthesizeAndPlay(string text, TTSModel model, TTSVoice voice, float speed)
+    {
+        this.model = model;
+        this.voice = voice;
+        this.speed = speed;
+        SynthesizeAndPlay(text);
+    }
 }

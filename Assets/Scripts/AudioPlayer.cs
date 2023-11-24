@@ -17,20 +17,18 @@ public class AudioPlayer : MonoBehaviour
     
     private IEnumerator LoadAndPlayAudio(string filePath)
     {
-        using (UnityWebRequest www = UnityWebRequestMultimedia.GetAudioClip("file://" + filePath, AudioType.MPEG))
-        {
-            yield return www.SendWebRequest();
+        using UnityWebRequest www = UnityWebRequestMultimedia.GetAudioClip("file://" + filePath, AudioType.MPEG);
+        yield return www.SendWebRequest();
 
-            if (www.result == UnityWebRequest.Result.Success)
-            {
-                AudioClip audioClip = DownloadHandlerAudioClip.GetContent(www);
-                audioSource.clip = audioClip;
-                audioSource.Play();
-            }
-            else
-            {
-                Debug.LogError("Audio file loading error: " + www.error);
-            }
+        if (www.result == UnityWebRequest.Result.Success)
+        {
+            AudioClip audioClip = DownloadHandlerAudioClip.GetContent(www);
+            audioSource.clip = audioClip;
+            audioSource.Play();
+        }
+        else
+        {
+            Debug.LogError("Audio file loading error: " + www.error);
         }
     }
 }
