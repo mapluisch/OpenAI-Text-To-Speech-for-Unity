@@ -1,11 +1,19 @@
+using System;
 using System.IO;
 using UnityEngine;
-using UnityEngine.Networking;
 using System.Collections;
+using UnityEngine.Networking;
 
+[RequireComponent(typeof(AudioSource))]
 public class AudioPlayer : MonoBehaviour
 {
-    [SerializeField] private AudioSource audioSource;
+    private AudioSource audioSource;
+    private bool deleteCachedFile = true;
+    
+    private void OnEnable()
+    {
+        this.audioSource = GetComponent<AudioSource>();
+    }
 
     public void ProcessAudioBytes(byte[] audioData)
     {
@@ -30,5 +38,7 @@ public class AudioPlayer : MonoBehaviour
         {
             Debug.LogError("Audio file loading error: " + www.error);
         }
+        
+        if (deleteCachedFile) File.Delete(filePath);
     }
 }

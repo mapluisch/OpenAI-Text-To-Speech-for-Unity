@@ -1,0 +1,17 @@
+{
+    "name": "com.martinpluisch.openai-text-to-speech",
+    "version": "1.0.0",
+    "displayName": "OpenAI Text To Speech",
+    "description": "A Unity package for integrating OpenAI's text-to-speech capabilities",
+    "unity": "2022.3.4f1",
+    "dependencies": {
+    },
+    "keywords": ["text-to-speech", "openai", "audio"],
+    "author": {
+      "name": "Martin Pluisch",
+      "email": "hello@martinpluisch.com",
+      "url": "https://martinpluisch.com"
+    },
+    "category": "Audio"
+  }
+  

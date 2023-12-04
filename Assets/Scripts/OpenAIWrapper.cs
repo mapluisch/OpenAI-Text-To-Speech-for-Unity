@@ -1,11 +1,9 @@
-using System.Reflection;
-using System.ComponentModel;
 using System.Text;
-using System.Net.Http;
-using System.Net.Http.Headers;
-using System.Threading.Tasks;
-using Newtonsoft.Json;
 using UnityEngine;
+using System.Net.Http;
+using Newtonsoft.Json;
+using System.Threading.Tasks;
+using System.Net.Http.Headers;
 
 public class OpenAIWrapper : MonoBehaviour
 {
@@ -42,7 +40,7 @@ public class OpenAIWrapper : MonoBehaviour
         {
             return response;
         }
-        Debug.Log("Error: " + httpResponse.StatusCode.ToString());
+        Debug.Log("Error: " + httpResponse.StatusCode);
         return null;
     }
     

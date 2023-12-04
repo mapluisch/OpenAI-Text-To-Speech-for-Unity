@@ -45,9 +45,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfaf23f70fae74149aff3b371587a856, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openAIWrapper: {fileID: 0}
   audioPlayer: {fileID: 733171135368295313}
-  text: Hello World
+  model: 0
+  voice: 0
+  speed: 1
 --- !u!1001 &6143858701567017995
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -104,8 +105,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioPlayer
       objectReference: {fileID: 0}
+    - target: {fileID: 6876963316446148506, guid: 41327cb76b77f4560baa48841392390d, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 2921076125238579620, guid: 41327cb76b77f4560baa48841392390d, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41327cb76b77f4560baa48841392390d, type: 3}

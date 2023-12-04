@@ -8558,10 +8558,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: OpenAI
       objectReference: {fileID: 0}
-    - target: {fileID: 8996109759252394209, guid: b54076d3a1b3342448a41fd8732dd04a, type: 3}
-      propertyPath: openAIKey
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
