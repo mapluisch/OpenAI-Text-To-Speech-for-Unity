@@ -1,9 +1,18 @@
 using System.Text;
 using UnityEngine;
 using System.Net.Http;
-using Newtonsoft.Json;
 using System.Threading.Tasks;
 using System.Net.Http.Headers;
+
+[System.Serializable]
+public class TTSPayload
+{
+    public string model;
+    public string input;
+    public string voice;
+    public string response_format;
+    public float speed;
+}
 
 public class OpenAIWrapper : MonoBehaviour
 {
@@ -19,7 +28,7 @@ public class OpenAIWrapper : MonoBehaviour
         using var httpClient = new HttpClient();
         httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", openAIKey);
 
-        var payload = new
+        TTSPayload payload = new TTSPayload
         {
             model = this.model.EnumToString(),
             input = text,
@@ -28,7 +37,7 @@ public class OpenAIWrapper : MonoBehaviour
             speed = this.speed
         };
 
-        string jsonPayload = JsonConvert.SerializeObject(payload);
+        string jsonPayload = JsonUtility.ToJson(payload);
 
         var httpResponse = await httpClient.PostAsync(
             "https://api.openai.com/v1/audio/speech", 
@@ -43,7 +52,6 @@ public class OpenAIWrapper : MonoBehaviour
         Debug.Log("Error: " + httpResponse.StatusCode);
         return null;
     }
-    
     
     public async Task<byte[]> RequestTextToSpeech(string text, TTSModel model, TTSVoice voice, float speed)
     {
