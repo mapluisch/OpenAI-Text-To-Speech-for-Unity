@@ -1,4 +1,4 @@
-# OpenAI Text-to-Speech Integration for Unity
+<h1 align="center">OpenAI Text-to-Speech Integration for Unity</h1>
 
 <p align="center">
   <img src="https://github.com/mapluisch/OpenAI-Text-To-Speech-for-Unity/assets/31780571/1f1ccb2f-f780-4f18-b347-d05ac25b6875" width="70%"/>
