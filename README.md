@@ -1,9 +1,9 @@
 <h1 align="center">OpenAI Text-to-Speech Integration for Unity</h1>
 
-<p align="center">
-  <img src="https://github.com/mapluisch/OpenAI-Text-To-Speech-for-Unity/assets/31780571/1f1ccb2f-f780-4f18-b347-d05ac25b6875" width="70%"/>
-</p>
-
+<div align="center">
+  <img src="https://github.com/mapluisch/OpenAI-Text-To-Speech-for-Unity/assets/31780571/ae08c0ba-cb60-4b6f-a904-bcdcc059893c" width="70%"/>
+  <p><em>Implementation of OpenAI's Text-To-Speech in Unity - synthesize any text and play it via any AudioSource.</em></p>
+</div>
 
 ---
 
