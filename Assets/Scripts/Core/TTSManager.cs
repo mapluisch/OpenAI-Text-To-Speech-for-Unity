@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class TTSManager : MonoBehaviour
@@ -14,6 +15,8 @@ public class TTSManager : MonoBehaviour
         if (!audioPlayer) this.audioPlayer = GetComponentInChildren<AudioPlayer>();
     }
 
+    private void OnValidate() => OnEnable();
+
     public async void SynthesizeAndPlay(string text)
     {
         Debug.Log("Trying to synthesize " + text);
@@ -23,13 +26,10 @@ public class TTSManager : MonoBehaviour
             Debug.Log("Playing audio.");
             audioPlayer.ProcessAudioBytes(audioData);
         }
-        else
-        {
-            Debug.LogError("Failed to get audio data from OpenAI.");
-        }
+        else Debug.LogError("Failed to get audio data from OpenAI.");
     }
 
-    public async void SynthesizeAndPlay(string text, TTSModel model, TTSVoice voice, float speed)
+    public void SynthesizeAndPlay(string text, TTSModel model, TTSVoice voice, float speed)
     {
         this.model = model;
         this.voice = voice;

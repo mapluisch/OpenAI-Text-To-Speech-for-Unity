@@ -8,12 +8,14 @@ using UnityEngine.Networking;
 public class AudioPlayer : MonoBehaviour
 {
     private AudioSource audioSource;
-    private bool deleteCachedFile = true;
-    
+    private const bool deleteCachedFile = true;
+
     private void OnEnable()
     {
-        this.audioSource = GetComponent<AudioSource>();
+        if (!audioSource) this.audioSource = GetComponent<AudioSource>();
     }
+
+    private void OnValidate() => OnEnable();
 
     public void ProcessAudioBytes(byte[] audioData)
     {
@@ -34,10 +36,7 @@ public class AudioPlayer : MonoBehaviour
             audioSource.clip = audioClip;
             audioSource.Play();
         }
-        else
-        {
-            Debug.LogError("Audio file loading error: " + www.error);
-        }
+        else Debug.LogError("Audio file loading error: " + www.error);
         
         if (deleteCachedFile) File.Delete(filePath);
     }
